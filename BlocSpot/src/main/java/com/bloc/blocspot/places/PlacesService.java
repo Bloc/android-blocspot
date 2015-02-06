@@ -45,7 +45,7 @@ public class PlacesService {
             JSONObject object = new JSONObject(json);
             JSONArray array = object.getJSONArray("results");
 
-            ArrayList<Place> arrayList = new ArrayList<Place>();
+            ArrayList<com.bloc.blocspot.places.Place> arrayList = new ArrayList<Place>();
             for (int i = 0; i < array.length(); i++) {
                 try {
                     Place place = Place

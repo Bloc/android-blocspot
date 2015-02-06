@@ -126,7 +126,7 @@ public class BlocSpotActivity extends Activity {
         @Override
         protected ArrayList<Place> doInBackground(Void... arg0) {
             PlacesService service = new PlacesService(
-                    "Put your project browser API key here");
+                    "AIzaSyAVbL3EIHhCvMHbnq4Za7WmWKT3Wu1eTJA");
             ArrayList<Place> findPlaces = service.findPlaces(loc.getLatitude(), // 28.632808
                     loc.getLongitude(), places); // 77.218276
 
@@ -154,8 +154,7 @@ public class BlocSpotActivity extends Activity {
     private void currentLocation() {
         locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
 
-        String provider = locationManager
-                .getBestProvider(new Criteria(), false);
+        String provider = locationManager.getBestProvider(new Criteria(), false);
 
         Location location = locationManager.getLastKnownLocation(provider);
 
@@ -196,3 +195,4 @@ public class BlocSpotActivity extends Activity {
     };
 
 }
+
